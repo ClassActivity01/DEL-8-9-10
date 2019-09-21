@@ -1,0 +1,89 @@
+﻿@model THe_BOok_MArket.Models.Book_Request
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/Layout12.cshtml";
+}
+
+<!--Page Header Title-->
+<header class="page-header">
+    <div class="container-fluid">
+        <h2 class="no-margin-bottom">Cancel Book Request</h2>
+    </div>
+</header>
+
+<!--Page Breadcrumb for Active Page navigation-->
+<div class="breadcrumb-holder container-fluid">
+    <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a href="~/Views/Home/Index.cshtml">Home</a></li>
+        <li class="breadcrumb-item active">Cancel Book Request</li>
+    </ul>
+</div>
+
+<section class="forms">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+
+                    <div class="card-header d-flex align-items-center">
+                        <h3 class="h4">Book Request details</h3>
+                    </div>
+
+                    <div class="card-body">
+
+                        <div>
+                            <dl class="dl-horizontal">
+                                <dt>
+                                    Book Title
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.Book_Title)
+                                </dd>
+
+                                <dt>
+                                   Author
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.Book_Author)
+                                </dd>
+
+                                <dt>
+                                    Book Edition
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.Book_Edition)
+                                </dd>
+
+
+
+                                <dt>
+                                   Customer Name
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.Customer.Customer_Name)
+                                </dd>
+
+                            </dl>
+
+                            @using (Html.BeginForm())
+                            {
+                                @Html.AntiForgeryToken()
+
+                                <div class="form-actions no-color">
+                                    <input type="submit" value="Cancel" class="btn btn-default" /> |
+                                    @Html.ActionLink("Back to Book Request details", "Index")
+                                </div>
+                            }
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+

@@ -1,0 +1,1038 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1551033B-BDE7-4AFC-8909-59DE3EE2D031}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>THe_BOok_MArket</RootNamespace>
+    <AssemblyName>THe BOok MArket</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44330</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>3.5</TypeScriptToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Dapper, Version=1.60.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.60.6\lib\net451\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinqToExcel, Version=2.0.0.2, Culture=neutral, PublicKeyToken=9c8ea65a58f03f1f, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.2.0.0-PRERELEASE-2\lib\net451\LinqToExcel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=5.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Logging.5.5.0\lib\net461\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=5.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.5.5.0\lib\net461\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="QRCoder, Version=1.3.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\QRCoder.1.3.6\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Linq, Version=2.1.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Remotion.Linq.2.1.2\lib\net45\Remotion.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Common, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.4.5.0\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing, Version=0.16.4.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.4\lib\net47\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.4.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.4\lib\net47\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BooksController.cs" />
+    <Compile Include="Controllers\Book_RequestController.cs" />
+    <Compile Include="Controllers\Book_SupplierController.cs" />
+    <Compile Include="Controllers\CustomersController.cs" />
+    <Compile Include="Controllers\EmployeeController.cs" />
+    <Compile Include="Controllers\ExportController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ImportController.cs" />
+    <Compile Include="Controllers\ImportXMLController.cs" />
+    <Compile Include="Controllers\InventoriesController.cs" />
+    <Compile Include="Controllers\Inventory_SupplierController.cs" />
+    <Compile Include="Controllers\Inventory_Supplier_OrderController.cs" />
+    <Compile Include="Controllers\Inventory_TypeController.cs" />
+    <Compile Include="Controllers\Order_LineController.cs" />
+    <Compile Include="Controllers\Payment_TypeController.cs" />
+    <Compile Include="Controllers\ProfilePicController.cs" />
+    <Compile Include="Controllers\Prospective_BookController.cs" />
+    <Compile Include="Controllers\PurchaseController.cs" />
+    <Compile Include="Controllers\ReportsController.cs" />
+    <Compile Include="Controllers\SalesController.cs" />
+    <Compile Include="Controllers\Stock_TurnsController.cs" />
+    <Compile Include="Controllers\SupplierOrderController.cs" />
+    <Compile Include="Controllers\UserRoleController.cs" />
+    <Compile Include="Controllers\UsersAuthController.cs" />
+    <Compile Include="EncryptPassword.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InventoryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Book.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Book_Condition.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Book_Request.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Book_Request_Line.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Book_Status.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Book_Supplier.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Condition.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Customer.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CustomerMetaData.cs" />
+    <Compile Include="Models\Employee.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Employee_Gender.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Employee_Title.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Extended\Employee.cs" />
+    <Compile Include="Models\Extended\User.cs" />
+    <Compile Include="Models\Extended\User_Role.cs" />
+    <Compile Include="Models\Inventory.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Inventory_Level.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Inventory_Level_Status.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Inventory_Price.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Inventory_Supplier.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Inventory_Supplier_Order.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Inventory_Type.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Order_Line.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Order_Status.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Payment_Type.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Prospective_Book.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Purchase.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Purchase_Line.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Received_Supplier_Order.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ResetPasswordModel.cs" />
+    <Compile Include="Models\Return_Line.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Return_Sale.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Return_Sale_Line.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Return_Supplier_Order.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sale.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sale_Line.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Stock_Turns.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TaxRate.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserLogin.cs" />
+    <Compile Include="Models\User_Role.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Write_Off_Line.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Write_Off_Stock.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MyRoleProvider.cs" />
+    <Compile Include="OrderDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrderDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SaleSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SaleSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="StockTurnSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StockTurnSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SupplierDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SupplierDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="The_Book_MarketDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>The_Book_MarketDataSet.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="alertify\alertify.min %282018_09_14 23_39_29 UTC%29.js" />
+    <Content Include="alertify\css\alertify %282018_09_14 23_39_29 UTC%29.css" />
+    <Content Include="alertify\css\bootstrap %282018_09_14 23_39_29 UTC%29.css" />
+    <Content Include="alertify\css\default %282018_09_14 23_39_29 UTC%29.css" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\jquery.jqGrid\ellipsis-xbl.xml" />
+    <Content Include="Content\jquery.jqGrid\ui.jqgrid.css" />
+    <Content Include="Content\themes\base\accordion.css" />
+    <Content Include="Content\themes\base\all.css" />
+    <Content Include="Content\themes\base\autocomplete.css" />
+    <Content Include="Content\themes\base\base.css" />
+    <Content Include="Content\themes\base\button.css" />
+    <Content Include="Content\themes\base\core.css" />
+    <Content Include="Content\themes\base\datepicker.css" />
+    <Content Include="Content\themes\base\dialog.css" />
+    <Content Include="Content\themes\base\draggable.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_444444_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_555555_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_777620_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_777777_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\menu.css" />
+    <Content Include="Content\themes\base\progressbar.css" />
+    <Content Include="Content\themes\base\resizable.css" />
+    <Content Include="Content\themes\base\selectable.css" />
+    <Content Include="Content\themes\base\selectmenu.css" />
+    <Content Include="Content\themes\base\slider.css" />
+    <Content Include="Content\themes\base\sortable.css" />
+    <Content Include="Content\themes\base\spinner.css" />
+    <Content Include="Content\themes\base\tabs.css" />
+    <Content Include="Content\themes\base\theme.css" />
+    <Content Include="Content\themes\base\tooltip.css" />
+    <Content Include="Content\Theme\Images\ui-icons_444444_256x240.png" />
+    <Content Include="Content\Theme\Images\ui-icons_555555_256x240.png" />
+    <Content Include="Content\Theme\Images\ui-icons_777620_256x240.png" />
+    <Content Include="Content\Theme\Images\ui-icons_777777_256x240.png" />
+    <Content Include="Content\Theme\Images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Content\Theme\Images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\Theme\jquery-ui.min.css" />
+    <Content Include="Content\ui.jqgrid.css" />
+    <Content Include="css\component %282018_09_14 23_39_29 UTC%29.css" />
+    <Content Include="css\custom.css" />
+    <Content Include="css\default-form %282018_09_14 23_39_29 UTC%29.css" />
+    <Content Include="css\fontastic.css" />
+    <Content Include="css\fonts %282018_09_14 23_39_29 UTC%29.css" />
+    <Content Include="css\general_and_landing %282018_09_14 23_39_29 UTC%29.css" />
+    <Content Include="css\login %282018_09_14 23_39_29 UTC%29.css" />
+    <Content Include="css\normalize %282018_09_14 23_39_29 UTC%29.css" />
+    <Content Include="css\style.blue.css" />
+    <Content Include="css\style.default.css" />
+    <Content Include="css\style.green.css" />
+    <Content Include="css\style.pink.css" />
+    <Content Include="css\style.red.css" />
+    <Content Include="css\style.sea.css" />
+    <Content Include="css\style.violet.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="font-awesome\css\font-awesome %282018_09_14 23_39_29 UTC%29.css" />
+    <Content Include="font-awesome\css\font-awesome.min %282018_09_14 23_39_29 UTC%29.css" />
+    <Content Include="fonts\dashboard.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="font-awesome\fonts\FontAwesome %282018_09_14 23_39_29 UTC%29.otf" />
+    <Content Include="font-awesome\fonts\fontawesome-webfont %282018_09_14 23_39_29 UTC%29.eot" />
+    <Content Include="font-awesome\fonts\fontawesome-webfont %282018_09_14 23_39_29 UTC%29.svg" />
+    <Content Include="font-awesome\fonts\fontawesome-webfont %282018_09_14 23_39_29 UTC%29.ttf" />
+    <Content Include="font-awesome\fonts\fontawesome-webfont %282018_09_14 23_39_29 UTC%29.woff" />
+    <Content Include="font-awesome\fonts\fontawesome-webfont %282018_09_14 23_39_29 UTC%29.woff2" />
+    <Content Include="font-awesome\less\animated %282018_09_14 23_39_29 UTC%29.less" />
+    <Content Include="font-awesome\less\bordered-pulled %282018_09_14 23_39_29 UTC%29.less" />
+    <Content Include="font-awesome\less\core %282018_09_14 23_39_29 UTC%29.less" />
+    <Content Include="font-awesome\less\fixed-width %282018_09_14 23_39_29 UTC%29.less" />
+    <Content Include="font-awesome\less\font-awesome %282018_09_14 23_39_29 UTC%29.less" />
+    <Content Include="font-awesome\less\icons %282018_09_14 23_39_29 UTC%29.less" />
+    <Content Include="font-awesome\less\larger %282018_09_14 23_39_29 UTC%29.less" />
+    <Content Include="font-awesome\less\list %282018_09_14 23_39_29 UTC%29.less" />
+    <Content Include="font-awesome\less\mixins %282018_09_14 23_39_29 UTC%29.less" />
+    <Content Include="font-awesome\less\path %282018_09_14 23_39_29 UTC%29.less" />
+    <Content Include="font-awesome\less\rotated-flipped %282018_09_14 23_39_29 UTC%29.less" />
+    <Content Include="font-awesome\less\screen-reader %282018_09_14 23_39_29 UTC%29.less" />
+    <Content Include="font-awesome\less\stacked %282018_09_14 23_39_29 UTC%29.less" />
+    <Content Include="font-awesome\less\variables %282018_09_14 23_39_29 UTC%29.less" />
+    <Content Include="font-awesome\scss\font-awesome %282018_09_14 23_39_29 UTC%29.scss" />
+    <Content Include="font-awesome\scss\_animated %282018_09_14 23_39_29 UTC%29.scss" />
+    <Content Include="font-awesome\scss\_bordered-pulled %282018_09_14 23_39_29 UTC%29.scss" />
+    <Content Include="font-awesome\scss\_core %282018_09_14 23_39_29 UTC%29.scss" />
+    <Content Include="font-awesome\scss\_fixed-width %282018_09_14 23_39_29 UTC%29.scss" />
+    <Content Include="font-awesome\scss\_icons %282018_09_14 23_39_29 UTC%29.scss" />
+    <Content Include="font-awesome\scss\_larger %282018_09_14 23_39_29 UTC%29.scss" />
+    <Content Include="font-awesome\scss\_list %282018_09_14 23_39_29 UTC%29.scss" />
+    <Content Include="font-awesome\scss\_mixins %282018_09_14 23_39_29 UTC%29.scss" />
+    <Content Include="font-awesome\scss\_path %282018_09_14 23_39_29 UTC%29.scss" />
+    <Content Include="font-awesome\scss\_rotated-flipped %282018_09_14 23_39_29 UTC%29.scss" />
+    <Content Include="font-awesome\scss\_screen-reader %282018_09_14 23_39_29 UTC%29.scss" />
+    <Content Include="font-awesome\scss\_stacked %282018_09_14 23_39_29 UTC%29.scss" />
+    <Content Include="font-awesome\scss\_variables %282018_09_14 23_39_29 UTC%29.scss" />
+    <Content Include="icons-reference\fonts\dashboard.svg" />
+    <Content Include="icons-reference\icons-reference.html" />
+    <Content Include="icons-reference\styles.css" />
+    <Content Include="js\charts-custom.js" />
+    <Content Include="js\charts-home.js" />
+    <Content Include="js\front.js" />
+    <Content Include="Models\Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.cs</LastGenOutput>
+    </Content>
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Scripts\Chart\exporting.js" />
+    <Content Include="Scripts\Chart\highcharts.js" />
+    <Content Include="Scripts\esm\popper-utils.js" />
+    <Content Include="Scripts\esm\popper-utils.min.js" />
+    <Content Include="Scripts\esm\popper.js" />
+    <Content Include="Scripts\esm\popper.min.js" />
+    <Content Include="Scripts\esm\popper.min.js.map" />
+    <Content Include="Scripts\esm\popper.js.map" />
+    <Content Include="Scripts\esm\popper-utils.min.js.map" />
+    <Content Include="Scripts\esm\popper-utils.js.map" />
+    <EntityDeploy Include="Models\Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Model.edmx.diagram">
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Content>
+    <Content Include="fonts\dashboard.eot" />
+    <Content Include="fonts\dashboard.ttf" />
+    <Content Include="fonts\dashboard.woff" />
+    <Content Include="icons-reference\fonts\dashboard.eot" />
+    <Content Include="icons-reference\fonts\dashboard.ttf" />
+    <Content Include="icons-reference\fonts\dashboard.woff" />
+    <Content Include="InventoryDataSet.xsc">
+      <DependentUpon>InventoryDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="InventoryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InventoryDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="InventoryDataSet.xss">
+      <DependentUpon>InventoryDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="OrderDataSet.xsc">
+      <DependentUpon>OrderDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="OrderDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrderDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="OrderDataSet.xss">
+      <DependentUpon>OrderDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="SaleSet.xsc">
+      <DependentUpon>SaleSet.xsd</DependentUpon>
+    </Content>
+    <None Include="SaleSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SaleSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="SaleSet.xss">
+      <DependentUpon>SaleSet.xsd</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\i18n\grid.locale-ar.js" />
+    <Content Include="Scripts\i18n\grid.locale-bg.js" />
+    <Content Include="Scripts\i18n\grid.locale-bg1251.js" />
+    <Content Include="Scripts\i18n\grid.locale-cat.js" />
+    <Content Include="Scripts\i18n\grid.locale-cn.js" />
+    <Content Include="Scripts\i18n\grid.locale-cs.js" />
+    <Content Include="Scripts\i18n\grid.locale-da.js" />
+    <Content Include="Scripts\i18n\grid.locale-de.js" />
+    <Content Include="Scripts\i18n\grid.locale-dk.js" />
+    <Content Include="Scripts\i18n\grid.locale-el.js" />
+    <Content Include="Scripts\i18n\grid.locale-en.js" />
+    <Content Include="Scripts\i18n\grid.locale-es.js" />
+    <Content Include="Scripts\i18n\grid.locale-fa.js" />
+    <Content Include="Scripts\i18n\grid.locale-fi.js" />
+    <Content Include="Scripts\i18n\grid.locale-fr.js" />
+    <Content Include="Scripts\i18n\grid.locale-gl.js" />
+    <Content Include="Scripts\i18n\grid.locale-he.js" />
+    <Content Include="Scripts\i18n\grid.locale-hr.js" />
+    <Content Include="Scripts\i18n\grid.locale-hr1250.js" />
+    <Content Include="Scripts\i18n\grid.locale-hu.js" />
+    <Content Include="Scripts\i18n\grid.locale-id.js" />
+    <Content Include="Scripts\i18n\grid.locale-is.js" />
+    <Content Include="Scripts\i18n\grid.locale-it.js" />
+    <Content Include="Scripts\i18n\grid.locale-ja.js" />
+    <Content Include="Scripts\i18n\grid.locale-kr.js" />
+    <Content Include="Scripts\i18n\grid.locale-lt.js" />
+    <Content Include="Scripts\i18n\grid.locale-mne.js" />
+    <Content Include="Scripts\i18n\grid.locale-nl.js" />
+    <Content Include="Scripts\i18n\grid.locale-no.js" />
+    <Content Include="Scripts\i18n\grid.locale-pl.js" />
+    <Content Include="Scripts\i18n\grid.locale-pt-br.js" />
+    <Content Include="Scripts\i18n\grid.locale-pt.js" />
+    <Content Include="Scripts\i18n\grid.locale-ro.js" />
+    <Content Include="Scripts\i18n\grid.locale-ru.js" />
+    <Content Include="Scripts\i18n\grid.locale-sk.js" />
+    <Content Include="Scripts\i18n\grid.locale-sr-latin.js" />
+    <Content Include="Scripts\i18n\grid.locale-sr.js" />
+    <Content Include="Scripts\i18n\grid.locale-sv.js" />
+    <Content Include="Scripts\i18n\grid.locale-th.js" />
+    <Content Include="Scripts\i18n\grid.locale-tr.js" />
+    <Content Include="Scripts\i18n\grid.locale-tw.js" />
+    <Content Include="Scripts\i18n\grid.locale-ua.js" />
+    <Content Include="Scripts\i18n\grid.locale-vi.js" />
+    <Content Include="Scripts\jqGrid\grid.locale-en.js" />
+    <Content Include="Scripts\jqGrid\jquery.jqGrid.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.12.1.js" />
+    <Content Include="Scripts\jquery-ui-1.12.1.min.js" />
+    <Content Include="Scripts\jquery.jqGrid.js" />
+    <Content Include="Scripts\jquery.jqGrid.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\popper-utils.js" />
+    <Content Include="Scripts\popper-utils.min.js" />
+    <Content Include="Scripts\popper.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\umd\popper-utils.js" />
+    <Content Include="Scripts\umd\popper-utils.min.js" />
+    <Content Include="Scripts\umd\popper.js" />
+    <Content Include="Scripts\umd\popper.min.js" />
+    <CodeAnalysisDictionary Include="Web.config" />
+    <Content Include="vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="vendor\chart.js\Chart.bundle.js" />
+    <Content Include="vendor\chart.js\Chart.bundle.min.js" />
+    <Content Include="vendor\chart.js\Chart.js" />
+    <Content Include="vendor\chart.js\Chart.min.js" />
+    <Content Include="vendor\font-awesome\css\font-awesome.css" />
+    <Content Include="vendor\font-awesome\css\font-awesome.min.css" />
+    <Content Include="vendor\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="vendor\font-awesome\HELP-US-OUT.txt" />
+    <Content Include="vendor\jquery-validation\additional-methods.js" />
+    <Content Include="vendor\jquery-validation\additional-methods.min.js" />
+    <Content Include="vendor\jquery-validation\jquery.validate.js" />
+    <Content Include="vendor\jquery-validation\jquery.validate.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_ar.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_ar.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_az.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_az.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_bg.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_bg.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_bn_BD.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_bn_BD.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_ca.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_ca.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_cs.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_cs.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_da.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_da.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_de.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_de.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_el.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_el.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_es.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_es.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_es_AR.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_es_AR.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_es_PE.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_es_PE.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_et.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_et.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_eu.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_eu.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_fa.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_fa.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_fi.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_fi.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_fr.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_fr.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_ge.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_ge.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_gl.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_gl.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_he.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_he.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_hr.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_hr.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_hu.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_hu.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_hy_AM.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_hy_AM.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_id.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_id.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_is.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_is.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_it.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_it.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_ja.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_ja.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_ka.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_ka.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_kk.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_kk.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_ko.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_ko.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_lt.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_lt.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_lv.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_lv.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_mk.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_mk.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_my.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_my.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_nl.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_nl.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_no.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_no.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_pl.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_pl.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_pt_BR.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_pt_BR.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_pt_PT.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_pt_PT.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_ro.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_ro.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_ru.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_ru.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_sd.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_sd.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_si.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_si.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_sk.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_sk.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_sl.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_sl.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_sr.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_sr.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_sr_lat.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_sr_lat.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_sv.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_sv.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_th.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_th.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_tj.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_tj.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_tr.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_tr.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_uk.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_uk.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_ur.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_ur.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_vi.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_vi.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_zh.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_zh.min.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_zh_TW.js" />
+    <Content Include="vendor\jquery-validation\localization\messages_zh_TW.min.js" />
+    <Content Include="vendor\jquery-validation\localization\methods_de.js" />
+    <Content Include="vendor\jquery-validation\localization\methods_de.min.js" />
+    <Content Include="vendor\jquery-validation\localization\methods_es_CL.js" />
+    <Content Include="vendor\jquery-validation\localization\methods_es_CL.min.js" />
+    <Content Include="vendor\jquery-validation\localization\methods_fi.js" />
+    <Content Include="vendor\jquery-validation\localization\methods_fi.min.js" />
+    <Content Include="vendor\jquery-validation\localization\methods_it.js" />
+    <Content Include="vendor\jquery-validation\localization\methods_it.min.js" />
+    <Content Include="vendor\jquery-validation\localization\methods_nl.js" />
+    <Content Include="vendor\jquery-validation\localization\methods_nl.min.js" />
+    <Content Include="vendor\jquery-validation\localization\methods_pt.js" />
+    <Content Include="vendor\jquery-validation\localization\methods_pt.min.js" />
+    <Content Include="vendor\jquery.cookie\jquery.cookie.js" />
+    <Content Include="vendor\jquery.cookie\MIT-LICENSE.txt" />
+    <Content Include="vendor\jquery\core.js" />
+    <Content Include="vendor\jquery\jquery.js" />
+    <Content Include="vendor\jquery\jquery.min.js" />
+    <Content Include="vendor\jquery\jquery.slim.js" />
+    <Content Include="vendor\jquery\jquery.slim.min.js" />
+    <Content Include="vendor\popper.js\esm\popper-utils.js" />
+    <Content Include="vendor\popper.js\esm\popper-utils.min.js" />
+    <Content Include="vendor\popper.js\esm\popper.js" />
+    <Content Include="vendor\popper.js\esm\popper.min.js" />
+    <Content Include="vendor\popper.js\popper-utils.js" />
+    <Content Include="vendor\popper.js\popper-utils.min.js" />
+    <Content Include="vendor\popper.js\popper.js" />
+    <Content Include="vendor\popper.js\popper.min.js" />
+    <Content Include="vendor\popper.js\umd\popper-utils.js" />
+    <Content Include="vendor\popper.js\umd\popper-utils.min.js" />
+    <Content Include="vendor\popper.js\umd\popper.js" />
+    <Content Include="vendor\popper.js\umd\popper.min.js" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Inventory_Supplier\Create.cshtml" />
+    <Content Include="Views\Inventory_Supplier\Delete.cshtml" />
+    <Content Include="Views\Inventory_Supplier\Details.cshtml" />
+    <Content Include="Views\Inventory_Supplier\Edit.cshtml" />
+    <Content Include="Views\Inventory_Supplier\Index.cshtml" />
+    <Content Include="Views\Employee\Create.cshtml" />
+    <Content Include="Views\Employee\Delete.cshtml" />
+    <Content Include="Views\Employee\Details.cshtml" />
+    <Content Include="Views\Employee\Edit.cshtml" />
+    <Content Include="Views\Employee\Index.cshtml" />
+    <Content Include="Views\UserRole\Create.cshtml" />
+    <Content Include="Views\UserRole\Delete.cshtml" />
+    <Content Include="Views\UserRole\Details.cshtml" />
+    <Content Include="Views\UserRole\Edit.cshtml" />
+    <Content Include="Views\UserRole\Index.cshtml" />
+    <Content Include="Scripts\umd\popper.min.js.map" />
+    <Content Include="Scripts\umd\popper.js.map" />
+    <Content Include="Scripts\umd\popper-utils.min.js.map" />
+    <Content Include="Scripts\umd\popper-utils.js.map" />
+    <Content Include="Scripts\README.md" />
+    <Content Include="Scripts\popper.min.js.map" />
+    <Content Include="Scripts\popper.js.map" />
+    <Content Include="Scripts\popper-utils.min.js.map" />
+    <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\UsersAuth\Register.cshtml" />
+    <Content Include="Views\UsersAuth\VerifyAccount.cshtml" />
+    <Content Include="Views\UsersAuth\Login.cshtml" />
+    <Content Include="Views\UsersAuth\ResetPassword.cshtml" />
+    <Content Include="Views\UsersAuth\ForgotPassword.cshtml" />
+    <Content Include="Views\Shared\_Layoutfluid.cshtml" />
+    <Content Include="vendor\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="vendor\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="vendor\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="vendor\jquery.cookie\component.json" />
+    <Content Include="vendor\jquery.cookie\cookie.jquery.json" />
+    <Content Include="vendor\popper.js\umd\poppper.js.flow" />
+    <Content Include="Views\Purchase\Create.cshtml" />
+    <Content Include="Views\Purchase\Delete.cshtml" />
+    <Content Include="Views\Purchase\Details.cshtml" />
+    <Content Include="Views\Purchase\Edit.cshtml" />
+    <Content Include="Views\Purchase\Index.cshtml" />
+    <Content Include="Views\Inventory_Type\Create.cshtml" />
+    <Content Include="Views\Inventory_Type\Delete.cshtml" />
+    <Content Include="Views\Inventory_Type\Details.cshtml" />
+    <Content Include="Views\Inventory_Type\Edit.cshtml" />
+    <Content Include="Views\Inventory_Type\Index.cshtml" />
+    <Content Include="Views\Home\Index2.cshtml" />
+    <Content Include="Views\Home\Navi1.cshtml" />
+    <Content Include="Views\Inventories\Create.cshtml" />
+    <Content Include="Views\Inventories\Delete.cshtml" />
+    <Content Include="Views\Inventories\Details.cshtml" />
+    <Content Include="Views\Inventories\Edit.cshtml" />
+    <Content Include="Views\Inventories\Index.cshtml" />
+    <Content Include="Views\Payment_Type\Create.cshtml" />
+    <Content Include="Views\Payment_Type\Delete.cshtml" />
+    <Content Include="Views\Payment_Type\Details.cshtml" />
+    <Content Include="Views\Payment_Type\Edit.cshtml" />
+    <Content Include="Views\Payment_Type\Index.cshtml" />
+    <Content Include="Views\Customers\Create.cshtml" />
+    <Content Include="Views\Customers\Delete.cshtml" />
+    <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Customers\Edit.cshtml" />
+    <Content Include="Views\Customers\Index.cshtml" />
+    <Content Include="Views\Book_Request\Create.cshtml" />
+    <Content Include="Views\Book_Request\Delete.cshtml" />
+    <Content Include="Views\Book_Request\Details.cshtml" />
+    <Content Include="Views\Book_Request\Edit.cshtml" />
+    <Content Include="Views\Book_Request\Index.cshtml" />
+    <Content Include="Views\Prospective_Book\Create.cshtml" />
+    <Content Include="Views\Prospective_Book\Delete.cshtml" />
+    <Content Include="Views\Prospective_Book\Details.cshtml" />
+    <Content Include="Views\Prospective_Book\Edit.cshtml" />
+    <Content Include="Views\Prospective_Book\Index.cshtml" />
+    <Content Include="Views\Books\Create.cshtml" />
+    <Content Include="Views\Books\Delete.cshtml" />
+    <Content Include="Views\Books\Details.cshtml" />
+    <Content Include="Views\Books\Edit.cshtml" />
+    <Content Include="Views\Books\Index.cshtml" />
+    <Content Include="Views\Book_Supplier\Create.cshtml" />
+    <Content Include="Views\Book_Supplier\Delete.cshtml" />
+    <Content Include="Views\Book_Supplier\Details.cshtml" />
+    <Content Include="Views\Book_Supplier\Edit.cshtml" />
+    <Content Include="Views\Book_Supplier\Index.cshtml" />
+    <Content Include="Views\Shared\Layout10.cshtml" />
+    <Content Include="Views\Shared\Layout12.cshtml" />
+    <Content Include="Views\Reports\InventoryReport.cshtml" />
+    <Content Include="Views\Inventories\InventoryReport.cshtml" />
+    <Content Include="Views\Reports\InventoryTypeList.cshtml" />
+    <Content Include="The_Book_MarketDataSet.xsc">
+      <DependentUpon>The_Book_MarketDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="StockTurnSet.xsc">
+      <DependentUpon>StockTurnSet.xsd</DependentUpon>
+    </Content>
+    <None Include="StockTurnSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StockTurnSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="StockTurnSet.xss">
+      <DependentUpon>StockTurnSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="SupplierDataSet.xsc">
+      <DependentUpon>SupplierDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="SupplierDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SupplierDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="SupplierDataSet.xss">
+      <DependentUpon>SupplierDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="The_Book_MarketDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>The_Book_MarketDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="The_Book_MarketDataSet.xss">
+      <DependentUpon>The_Book_MarketDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="Views\Inventory_Type\InventoryTypeList.cshtml" />
+    <Content Include="Views\Home\InventoryList.cshtml" />
+    <Content Include="Views\Home\SalesList.cshtml" />
+    <Content Include="Views\Home\OrderList.cshtml" />
+    <Content Include="Views\Home\SuppOrderList.cshtml" />
+    <Content Include="Views\Home\StockTurnsList.cshtml" />
+    <Content Include="Views\Home\InventoryTypeList.cshtml" />
+    <Content Include="Views\Stock_Turns\Create.cshtml" />
+    <Content Include="Views\Stock_Turns\Delete.cshtml" />
+    <Content Include="Views\Stock_Turns\Details.cshtml" />
+    <Content Include="Views\Stock_Turns\Edit.cshtml" />
+    <Content Include="Views\Stock_Turns\Index.cshtml" />
+    <Content Include="Views\Sales\Create.cshtml" />
+    <Content Include="Views\Sales\Delete.cshtml" />
+    <Content Include="Views\Sales\Details.cshtml" />
+    <Content Include="Views\Sales\Edit.cshtml" />
+    <Content Include="Views\Sales\Index.cshtml" />
+    <Content Include="Views\Order_Line\Create.cshtml" />
+    <Content Include="Views\Order_Line\Delete.cshtml" />
+    <Content Include="Views\Order_Line\Details.cshtml" />
+    <Content Include="Views\Order_Line\Edit.cshtml" />
+    <Content Include="Views\Order_Line\Index.cshtml" />
+    <Content Include="Views\Inventory_Supplier_Order\Create.cshtml" />
+    <Content Include="Views\Inventory_Supplier_Order\Delete.cshtml" />
+    <Content Include="Views\Inventory_Supplier_Order\Details.cshtml" />
+    <Content Include="Views\Inventory_Supplier_Order\Edit.cshtml" />
+    <Content Include="Views\Inventory_Supplier_Order\Index.cshtml" />
+    <Content Include="Views\SupplierOrder\Index.cshtml" />
+    <Content Include="Views\Import\UploadExcel.cshtml" />
+    <Content Include="Views\Import\Index.cshtml" />
+    <Content Include="Views\Export\ExportToXML.cshtml" />
+    <Content Include="Views\Customers\ExportToXML.cshtml" />
+    <Content Include="Views\ImportXML\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Doc\" />
+    <Folder Include="FileUpload\" />
+    <Folder Include="Image\" />
+    <Folder Include="Views\ProfilePic\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Reports\Inventory.rdlc" />
+    <EmbeddedResource Include="Reports\InventoryTypeReport.rdlc" />
+    <EmbeddedResource Include="Reports\Order.rdlc" />
+    <EmbeddedResource Include="Reports\Sale.rdlc" />
+    <EmbeddedResource Include="Reports\StockTurns.rdlc" />
+    <EmbeddedResource Include="Reports\Supplier.rdlc" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56774</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44330/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
