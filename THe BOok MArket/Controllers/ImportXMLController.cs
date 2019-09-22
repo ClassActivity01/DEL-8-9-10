@@ -13,9 +13,10 @@ namespace THe_BOok_MArket.Controllers
     {
         private The_Book_MarketEntities db = new The_Book_MarketEntities();
         // GET: ImportXML
+        [HttpGet]
         public ActionResult Index()
         {
-            return View();
+            return View(); 
         }
 
         public ActionResult GetData()
@@ -28,53 +29,110 @@ namespace THe_BOok_MArket.Controllers
         }
 
         [HttpPost]
-        public ActionResult Upload(HttpPostedFileBase xmlFile)
+        public ActionResult Index(HttpPostedFileBase xmlFile)
         {
             if (xmlFile.ContentType.Equals("application/xml") || xmlFile.ContentType.Equals("text/xml"))
             {
-                var xmlPath = Server.MapPath("~/FileUpload" + xmlFile.FileName);
-                xmlFile.SaveAs(xmlPath);
-                XDocument xDoc = XDocument.Load(xmlPath);   
-                List<Customer> custList = xDoc.Descendants("customer").Select
-                    (customer => new Customer
-                    {
-                        Customer_ID = Convert.ToInt32(customer.Element("cus_id").Value),
-                        Customer_Name = (customer.Element("name").Value),
-                        Customer_Surname = customer.Element("surname").Value,
-                        Customer_Email = customer.Element("email").Value,
-                        Customer_Contact = customer.Element("contact").Value
-                    }).ToList();
-
-                using (The_Book_MarketEntities db = new The_Book_MarketEntities())
+                try
                 {
-                    foreach (var i in custList)
+                    var xmlPath = Server.MapPath("~/FileUpload" + xmlFile.FileName);
+                    xmlFile.SaveAs(xmlPath);
+                    XDocument xDoc = XDocument.Load(xmlPath);
+                    List<Customer> custList = xDoc.Descendants("customer").Select
+                        (customer => new Customer
+                        {
+                            Customer_ID = Convert.ToInt32(customer.Element("id").Value),    
+                            Customer_Name = customer.Element("name").Value,
+                            Customer_Surname = customer.Element("surname").Value,
+                            Customer_Email = customer.Element("email").Value,
+                            Customer_Contact = customer.Element("contact").Value
+                        }).ToList();
+
+                    using (The_Book_MarketEntities db = new The_Book_MarketEntities())
                     {
-                        var v = db.Customers.Where(a => a.Customer_ID.Equals(i.Customer_ID)).FirstOrDefault();
-
-                        if (v != null)
+                        foreach (var i in custList)
                         {
-                            v.Customer_ID = i.Customer_ID;
-                            v.Customer_Name = i.Customer_Name;
-                            v.Customer_Surname = i.Customer_Surname;
-                            v.Customer_Email = i.Customer_Email;
-                            v.Customer_Contact = i.Customer_Contact;
+                            var v = db.Customers.Where(a => a.Customer_ID.Equals(i.Customer_ID)).FirstOrDefault();
 
-                        }
-                        else
-                        {
-                            db.Customers.Add(i);
+                            if (v != null)
+                            {
+                                v.Customer_ID = i.Customer_ID;
+                                v.Customer_Name = i.Customer_Name;
+                                v.Customer_Surname = i.Customer_Surname;
+                                v.Customer_Email = i.Customer_Email;
+                                v.Customer_Contact = i.Customer_Contact;
+
+                            }
+                            else
+                            {
+                                db.Customers.Add(i);
+                            }
+                           
                         }
                         db.SaveChanges();
+                        ViewBag.Result = db.Customers.ToList();
                     }
+                    return View("Success");
                 }
-                ViewBag.Success = "File uploaded successfully..";
+                catch
+                {
+                    ViewBag.Error = "Cant Import XML File";
+                    return View("Index");
+                }
             }
             else
             {
-                ViewBag.Error = "Invalid file(Upload xml file only)";
+                ViewBag.Error = "Cant Import XML File";
+                return View("Index");
             }
-            return View("Index");
         }
+        //public ActionResult Upload(HttpPostedFileBase xmlFile)
+        //{
+        //    if (xmlFile.ContentType.Equals("application/xml") || xmlFile.ContentType.Equals("text/xml"))
+        //    {
+        //        var xmlPath = Server.MapPath("~/FileUpload" + xmlFile.FileName);
+        //        xmlFile.SaveAs(xmlPath);
+        //        XDocument xDoc = XDocument.Load(xmlPath);   
+        //        List<Customer> custList = xDoc.Descendants("customer").Select
+        //            (customer => new Customer
+        //            {
+        //                Customer_ID = Convert.ToInt32(customer.Element("cus_id").Value),
+        //                Customer_Name = (customer.Element("name").Value),
+        //                Customer_Surname = customer.Element("surname").Value,
+        //                Customer_Email = customer.Element("email").Value,
+        //                Customer_Contact = customer.Element("contact").Value
+        //            }).ToList();
+
+        //        using (The_Book_MarketEntities db = new The_Book_MarketEntities())
+        //        {
+        //            foreach (var i in custList)
+        //            {   
+        //                var v = db.Customers.Where(a => a.Customer_ID.Equals(i.Customer_ID)).FirstOrDefault();
+
+        //                if (v != null)
+        //                {
+        //                    v.Customer_ID = i.Customer_ID;
+        //                    v.Customer_Name = i.Customer_Name;
+        //                    v.Customer_Surname = i.Customer_Surname;
+        //                    v.Customer_Email = i.Customer_Email;
+        //                    v.Customer_Contact = i.Customer_Contact;
+
+        //                }
+        //                else
+        //                {
+        //                    db.Customers.Add(i);
+        //                }
+        //                db.SaveChanges();
+        //            }
+        //        }
+        //        ViewBag.Success = "File uploaded successfully..";
+        //    }
+        //    else
+        //    {
+        //        ViewBag.Error = "Invalid file(Upload xml file only)";
+        //    }
+        //    return View("Index");
+        //}
 
 
     }

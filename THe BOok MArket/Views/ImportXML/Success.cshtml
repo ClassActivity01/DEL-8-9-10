@@ -1,0 +1,35 @@
+﻿ 
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Success</title>
+</head>
+<body>
+   <table cellpadding="2" cellspacing="2" border="1">
+       <tr>
+           <th>Cus Number</th>
+           <th>Name</th>
+           <th>Surname</th>
+           <th>Email</th>
+           <th>Contact</th>
+       </tr>
+       @foreach(var customer in ViewBag.Result)
+       { 
+             <tr>
+                 <td>@customer.Customer_ID</td>
+                 <td>@customer.Customer_Name</td>
+                 <td>@customer.Customer_Surname</td>
+                 <td>@customer.Customer_Email</td>
+                 <td>@customer.Customer_Contact</td>
+             </tr>
+       }
+       
+   </table>
+</body>
+</html>

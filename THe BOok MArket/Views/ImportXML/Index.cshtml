@@ -24,7 +24,7 @@
             width: 100%;  
         }  
     </style>  
-    <script type="text/javascript">  
+    @*<script type="text/javascript">  
         $(document).ready(function () {  
             $('form').validate({  
                 rules: {  
@@ -52,13 +52,26 @@
                 ]  
             });  
         });  
-    </script>  
+    </script>*@  
 </head>  
 <body>  
     <div class="container py-5">  
-        @using (Html.BeginForm("Upload", "ImportXML", FormMethod.Post, new { enctype = "multipart/form-data" }))  
+        @using (Html.BeginForm("Index", "ImportXML", FormMethod.Post, new { enctype = "multipart/form-data" }))  
         {  
-            <div class="row">  
+            @ViewBag.Error
+            <table cellpadding="2" cellspacing="2">
+                <tr>
+                    <td>XML File</td> 
+                    <td><input type="file" name="xmlFile" /></td> 
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><input type="submit" value="Import" /></td>
+                </tr>
+            </table>
+
+
+            @*<div class="row">   
                 <div class="col-sm-1 col-md-6 col-xs-12">  
                     <h5 class="text-danger">@ViewBag.Error</h5>  
                     <h5 class="text-success">@ViewBag.Success</h5>  
@@ -75,9 +88,9 @@
                         </div>  
                     </div>  
                 </div>  
-            </div>  
+            </div>*@  
         }  
-        <table id="dataTable" class="table table-bordered table-striped">  
+        @*<table id="dataTable" class="table table-bordered table-striped">  
             <thead>  
                 <tr>
                     <th>ID</th>
@@ -87,7 +100,7 @@
                     <th>Contact</th>
                 </tr>  
             </thead>  
-        </table>  
+        </table>*@  
     </div>  
 </body>  
 </html>  
