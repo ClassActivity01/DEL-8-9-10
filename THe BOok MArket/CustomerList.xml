@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<customers>
+  <customer>
+    <Customer_Name>Cameronn</Customer_Name>
+    <Customer_Surname>Caroline</Customer_Surname>
+    <Customer_Email>ccline@gmail.com</Customer_Email>
+    <Customer_Contact>832257848</Customer_Contact>
+  </customer>
+  <customer>
+    <Customer_Name>Julian</Customer_Name>
+    <Customer_Surname>Gomez</Customer_Surname>
+    <Customer_Email>jgomez@gmail.com</Customer_Email>
+    <Customer_Contact>865858758</Customer_Contact>
+  </customer>
+  <customer>
+    <Customer_Name>Seb</Customer_Name>
+    <Customer_Surname>Vettel</Customer_Surname>
+    <Customer_Email>sebvferrari@gmail.com</Customer_Email>
+    <Customer_Contact>7985865854</Customer_Contact>
+  </customer>
+</customers>
+  

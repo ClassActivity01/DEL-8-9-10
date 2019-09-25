@@ -1,0 +1,40 @@
+D:\Dropbox\Samples\MVC\WebCam_MVC\WebCam_MVC\bin\WebCam_MVC.dll.config
+D:\Dropbox\Samples\MVC\WebCam_MVC\WebCam_MVC\bin\WebCam_MVC.dll
+D:\Dropbox\Samples\MVC\WebCam_MVC\WebCam_MVC\bin\WebCam_MVC.pdb
+D:\Dropbox\Samples\MVC\WebCam_MVC\WebCam_MVC\bin\System.Web.Helpers.dll
+D:\Dropbox\Samples\MVC\WebCam_MVC\WebCam_MVC\bin\System.Web.Mvc.dll
+D:\Dropbox\Samples\MVC\WebCam_MVC\WebCam_MVC\bin\System.Web.Razor.dll
+D:\Dropbox\Samples\MVC\WebCam_MVC\WebCam_MVC\bin\System.Web.Webpages.Deployment.dll
+D:\Dropbox\Samples\MVC\WebCam_MVC\WebCam_MVC\bin\System.Web.Webpages.dll
+D:\Dropbox\Samples\MVC\WebCam_MVC\WebCam_MVC\bin\System.Web.Webpages.Razor.dll
+D:\Dropbox\Samples\MVC\WebCam_MVC\WebCam_MVC\bin\System.Web.Razor.xml
+D:\Dropbox\Samples\MVC\WebCam_MVC\WebCam_MVC\bin\System.Web.Webpages.xml
+D:\Dropbox\Samples\MVC\WebCam_MVC\WebCam_MVC\bin\System.Web.Webpages.Deployment.xml
+D:\Dropbox\Samples\MVC\WebCam_MVC\WebCam_MVC\bin\System.Web.Webpages.Razor.xml
+D:\Dropbox\Samples\MVC\WebCam_MVC\WebCam_MVC\bin\System.Web.Helpers.xml
+D:\Dropbox\Samples\MVC\WebCam_MVC\WebCam_MVC\bin\System.Web.Mvc.xml
+D:\Dropbox\Samples\MVC\WebCam_MVC\WebCam_MVC\obj\Debug\WebCam_MVC.csprojResolveAssemblyReference.cache
+D:\Dropbox\Samples\MVC\WebCam_MVC\WebCam_MVC\obj\Debug\WebCam_MVC.dll
+D:\Dropbox\Samples\MVC\WebCam_MVC\WebCam_MVC\obj\Debug\WebCam_MVC.pdb
+D:\Dropbox\Samples\MVC\WebCam_MVC\WebCam_MVC\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 8,9\Order Pull\WebCam_MVC (1)\WebCam_MVC\bin\WebCam_MVC.dll.config
+C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 8,9\Order Pull\WebCam_MVC (1)\WebCam_MVC\bin\WebCam_MVC.dll
+C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 8,9\Order Pull\WebCam_MVC (1)\WebCam_MVC\bin\WebCam_MVC.pdb
+C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 8,9\Order Pull\WebCam_MVC (1)\WebCam_MVC\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 8,9\Order Pull\WebCam_MVC (1)\WebCam_MVC\bin\System.Web.Helpers.dll
+C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 8,9\Order Pull\WebCam_MVC (1)\WebCam_MVC\bin\System.Web.Mvc.dll
+C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 8,9\Order Pull\WebCam_MVC (1)\WebCam_MVC\bin\System.Web.Razor.dll
+C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 8,9\Order Pull\WebCam_MVC (1)\WebCam_MVC\bin\System.Web.Webpages.Deployment.dll
+C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 8,9\Order Pull\WebCam_MVC (1)\WebCam_MVC\bin\System.Web.Webpages.dll
+C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 8,9\Order Pull\WebCam_MVC (1)\WebCam_MVC\bin\System.Web.Webpages.Razor.dll
+C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 8,9\Order Pull\WebCam_MVC (1)\WebCam_MVC\bin\System.Web.Razor.xml
+C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 8,9\Order Pull\WebCam_MVC (1)\WebCam_MVC\bin\System.Web.Webpages.xml
+C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 8,9\Order Pull\WebCam_MVC (1)\WebCam_MVC\bin\System.Web.Webpages.Deployment.xml
+C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 8,9\Order Pull\WebCam_MVC (1)\WebCam_MVC\bin\System.Web.Webpages.Razor.xml
+C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 8,9\Order Pull\WebCam_MVC (1)\WebCam_MVC\bin\System.Web.Helpers.xml
+C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 8,9\Order Pull\WebCam_MVC (1)\WebCam_MVC\bin\System.Web.Mvc.xml
+C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 8,9\Order Pull\WebCam_MVC (1)\WebCam_MVC\obj\Debug\WebCam_MVC.csprojAssemblyReference.cache
+C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 8,9\Order Pull\WebCam_MVC (1)\WebCam_MVC\obj\Debug\WebCam_MVC.csproj.CoreCompileInputs.cache
+C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 8,9\Order Pull\WebCam_MVC (1)\WebCam_MVC\obj\Debug\WebCam_MVC.csproj.CopyComplete
+C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 8,9\Order Pull\WebCam_MVC (1)\WebCam_MVC\obj\Debug\WebCam_MVC.dll
+C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 8,9\Order Pull\WebCam_MVC (1)\WebCam_MVC\obj\Debug\WebCam_MVC.pdb

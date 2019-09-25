@@ -169,6 +169,7 @@
     <Compile Include="Controllers\Book_RequestController.cs" />
     <Compile Include="Controllers\Book_SupplierController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
+    <Compile Include="Controllers\DTableController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\ExportController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -189,6 +190,7 @@
     <Compile Include="Controllers\SupplierOrderController.cs" />
     <Compile Include="Controllers\UserRoleController.cs" />
     <Compile Include="Controllers\UsersAuthController.cs" />
+    <Compile Include="Controllers\WebCamController.cs" />
     <Compile Include="EncryptPassword.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -968,6 +970,7 @@
     <Content Include="Views\Customers\ExportToXML.cshtml" />
     <Content Include="Views\ImportXML\Index.cshtml" />
     <Content Include="Views\ImportXML\Success.cshtml" />
+    <Content Include="Views\DTable\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -975,6 +978,7 @@
     <Folder Include="FileUpload\" />
     <Folder Include="Image\" />
     <Folder Include="Views\ProfilePic\" />
+    <Folder Include="Views\WebCam\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
