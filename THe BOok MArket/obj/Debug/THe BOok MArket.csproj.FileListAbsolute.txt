@@ -161,9 +161,6 @@ C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 8,9\Order Pull\THe BOok MArket\
 C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 8,9\Order Pull\THe BOok MArket\bin\roslyn\VBCSCompiler.exe
 C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 8,9\Order Pull\THe BOok MArket\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 8,9\Order Pull\THe BOok MArket\bin\Antlr3.Runtime.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 8,9\Order Pull\THe BOok MArket\bin\CrystalDecisions.CrystalReports.Engine.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 8,9\Order Pull\THe BOok MArket\bin\CrystalDecisions.ReportSource.dll
-C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 8,9\Order Pull\THe BOok MArket\bin\CrystalDecisions.Shared.dll
 C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 8,9\Order Pull\THe BOok MArket\bin\Dapper.dll
 C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 8,9\Order Pull\THe BOok MArket\bin\EntityFramework.dll
 C:\Users\VEx\Documents\Modules\Y3\INF 370\ДЕЛ 8,9\Order Pull\THe BOok MArket\bin\EntityFramework.SqlServer.dll
